@@ -21,6 +21,12 @@ body {
 h1 {
   font-size: 22px;
   margin: 0 0 16px;
+  .contador {
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--acento);
+  margin: 0 0 16px;
+}
 }
 
 #lista {
