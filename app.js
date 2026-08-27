@@ -24,5 +24,18 @@ function render() {
   actualizarContador();
 
 }
+function showEmptyState() {
+  const notice = document.querySelector("#vacio");
+  notice.hidden = TASKS.length > 0;
+}
 
+function render() {
+  const list = document.querySelector("#lista");
+  list.innerHTML = "";
+  TASKS.forEach(function (t) {
+    // ... draw each task ...
+  });
+  updateCounter();
+  showEmptyState();
+}
 render();
