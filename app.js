@@ -9,6 +9,9 @@ function actualizarContador() {
     return !t.hecha;
   }).length;
   document.querySelector("#contador").textContent = pendientes + " pendientes";
+function showEmptyState() {
+  const notice = document.querySelector("#empty"); 
+  notice.hidden = TAREAS.length > 0; 
 }
 
 function render() {
@@ -36,6 +39,8 @@ function render() {
     // ... draw each task ...
   });
   updateCounter();
+  
   showEmptyState();
 }
+
 render();
