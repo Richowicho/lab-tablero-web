@@ -19,8 +19,13 @@ function showEmptyState() {
   notice.hidden = TASKS.length > 0;
 }
 
- function render() {
-   // ... the body that already exists ...
+function render() {
+  const list = document.querySelector("#lista");
+  list.innerHTML = "";
+  TASKS.forEach(function (t) {
+    // ... draw each task ...
+  });
+  updateCounter();
   showEmptyState();
- }
+}
 render();
