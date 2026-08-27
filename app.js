@@ -18,7 +18,7 @@ function render() {
     li.textContent = t.texto;
     lista.appendChild(li);
   });
-  
+  updateCounter();
   showEmptyState();
 }
 
