@@ -14,5 +14,13 @@ function render() {
     lista.appendChild(li);
   });
 }
+function showEmptyState() {
+  const notice = document.querySelector("#vacio");
+  notice.hidden = TASKS.length > 0;
+}
 
+ function render() {
+   // ... the body that already exists ...
+  showEmptyState();
+ }
 render();
